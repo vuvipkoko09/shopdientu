@@ -1,0 +1,196 @@
+/* --- CSS CHUNG CHO LOGIN & REGISTER --- */
+
+.loginContainer {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #a7c8f2, #e4f0fa);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: #333;
+}
+
+/* Container của form bên trong */
+.loginFormContainer {
+  background-color: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.loginTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+}
+
+.formInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d2d6dc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin-top: 5px;
+  box-sizing: border-box; 
+  margin-bottom: 15px;
+}
+
+.formInput:focus {
+  border-color: #5a67d8;
+  box-shadow: 0 0 0 3px rgba(85, 103, 216, 0.2);
+}
+
+.loginButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #5a67d8;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.loginButton:hover {
+  background-color: #4c51bf;
+}
+
+/* Thông báo lỗi & thành công */
+.errorMessage {
+  color: #e53e3e; /* Đã gộp (màu đỏ đậm hơn) */
+  font-size: 0.875rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.successMessage {
+  color: #5cb85c;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Link Đăng ký */
+.footerText {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: #777;
+}
+
+.registerLink {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+}
+
+/* --- CSS RIÊNG CHO REGISTER (2 CỘT) --- */
+
+.registerFormContainer {
+  max-width: 800px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.formSpanFull {
+  grid-column: 1 / -1;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES (ĐÃ SỬA VÀ GỘP) --- */
+
+/* Cho màn hình máy tính bảng và nhỏ hơn */
+@media (max-width: 768px) {
+  /* Sửa lỗi: Dùng đúng tên class .loginContainer (thay vì .login-container) */
+  .loginContainer {
+    padding: 25px;
+  }
+  
+  /* Sửa lỗi: Dùng đúng tên class .loginTitle */
+  .loginTitle {
+    font-size: 1.6rem;
+  }
+
+  /* Sửa lỗi: Dùng đúng tên class .formInput, .loginButton */
+  .formInput,
+  .loginButton {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Sửa lỗi: Dùng đúng tên class .footerText */
+  .footerText {
+    font-size: 0.8rem;
+  }
+
+  /* CSS cho form register trên di động (đã gộp vào đây) */
+  .registerFormContainer {
+    max-width: 450px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr; /* 1 cột */
+    gap: 0.5rem;
+  }
+
+  .formSpanFull {
+    grid-column: 1; /* Reset span */
+  }
+}
+
+/* Cho màn hình di động nhỏ */
+@media (max-width: 480px) {
+  /* Sửa lỗi: Dùng đúng tên class .loginContainer */
+  .loginContainer {
+    padding: 20px;
+  }
+
+  /* Sửa lỗi: Dùng đúng tên class .loginTitle */
+  .loginTitle {
+    font-size: 1.4rem;
+  }
+
+  /* Sửa lỗi: Dùng đúng tên class .formInput, .loginButton */
+  .formInput,
+  .loginButton {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  /* Sửa lỗi: Dùng đúng tên class .footerText */
+  .footerText {
+    font-size: 0.75rem;
+  }
+}

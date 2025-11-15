@@ -1,0 +1,85 @@
+/* Style chung cho cả cái bảng */
+.category-table {
+  width: 100%;
+  border-collapse: collapse; /* Gộp viền */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Bắt buộc phải có để bo góc */
+}
+
+/* Style cho cả <th> và <td> */
+.category-table th,
+.category-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd; /* Viền ngang */
+  text-align: left;
+}
+
+/* Style riêng cho Header <th> */
+.category-table th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  border-bottom-width: 2px; /* Viền header đậm hơn */
+}
+
+/* Selector này có nghĩa là: 
+  "Chọn mọi <th> và <td> MÀ KHÔNG PHẢI LÀ con đầu tiên"
+  -> Nó sẽ tự động thêm viền trái cho cột 2, 3, 4...
+*/
+.category-table th:not(:first-child),
+.category-table td:not(:first-child) {
+  border-left: 1px solid #ddd; /* Đây là viền cột bạn muốn! */
+}
+
+/* Style cho hàng "Không có dữ liệu" */
+.no-data-row td {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+/* Thêm hiệu ứng hover cho đẹp mắt */
+.category-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+/* Style cho ô chứa các nút hành động */
+.category-table td.action-cell {
+  text-align: center; /* Căn giữa các nút */
+}
+
+/* Style chung cho nút */
+.action-cell button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 0 4px; /* Tạo khoảng cách giữa các nút */
+  transition: all 0.2s ease;
+}
+
+/* Nút Sửa (màu cam/vàng) */
+.btn-edit {
+  background-color: #ffc107;
+  color: #333;
+}
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+/* Nút Xóa (màu đỏ) */
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Sửa lại hàng "Không có dữ liệu" (nếu bạn dùng className) */
+.no-data-row td {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
